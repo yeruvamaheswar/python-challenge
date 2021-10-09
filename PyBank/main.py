@@ -4,7 +4,7 @@ import os
 
 # Module for reading CSV files.
 import csv
-from sys import argv
+
 # Path where the CSV file stored.
 path = "/Users/mr7macbookpro/Documents/DAV BC/HomeWork/3. PythonChallenge/python-challenge/PyBank/Resources"
 CsvPath = os.path.join(path, 'budget_data.csv')
