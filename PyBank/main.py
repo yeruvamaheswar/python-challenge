@@ -5,23 +5,29 @@ import os
 # Module for reading CSV files.
 import csv
 
-# Path where the CSV file stored.
+# Path where the Input CSV file stored.
 path = "/Users/mr7macbookpro/Documents/DAV BC/HomeWork/3. PythonChallenge/python-challenge/PyBank/Resources"
+# Joining the path to get the full path of csv file
 CsvPath = os.path.join(path, 'budget_data.csv')
+
+#Intializing Variables.
 AllDates = []
 AllAmounts = []
 MonthlyProfitChange = []
 TotalPL = 0
 TotalMonths =0  
 MaxProfitChangeIndex = 0
+
+#Opening CSV file to read the items inside.
 with open(CsvPath) as csvfile:
 
-    # CSV reader specifies delimiter and variable that holds contents
+    # CSV reader specifies delimiter and variable that holds contents.
     csvreader = csv.reader(csvfile, delimiter=',')
     
+    #Skiping the CSV coloumn headers.
     next(csvreader)    
 
-    # Read each row of data after the header
+    # Read each row of data after the header in to a list variables.
     for row in csvreader:
         AllDates.append(row[0])
         AllAmounts.append(int(row[1]))
