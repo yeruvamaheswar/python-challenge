@@ -87,7 +87,7 @@ with open(ResultsTextFile,"w") as file:
     file.write("\n")
     file.write("----------------------------")
     file.write("\n")
-    file.write(f"Total Votes: {len(ColVoterID)-1}")
+    file.write(f"Total Votes: {len(ColVoterID)}")
     file.write("\n")
     file.write("-------------------------")
     file.write("\n")
